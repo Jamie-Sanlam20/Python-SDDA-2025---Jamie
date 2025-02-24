@@ -9,6 +9,8 @@
 **Hypertext Transfer Protocol (HTTP)** is the fundamental protocol (rules) used for transferring data over the web.
 HTTP/3 is the **latest version** of HTTP, designed to address the limitations of **HTTP/2** and enhance web performance.
 
+![alt text](image.png)
+
 ### **Key Differences Between HTTP/2 and HTTP/3:**
 
 ### <span style="color: #FF4500;">1. **Protocol Used**</span>
