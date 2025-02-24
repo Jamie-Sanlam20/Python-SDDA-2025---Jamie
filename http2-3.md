@@ -1,6 +1,6 @@
 # <span style="color: #2E8B57">**HTTP/2 vs HTTP/3**</span>
 
-### <div style="text-align: center;">**By Jamie Isaacs**</div>
+### <div style="text-align: center;">**By Jamie**</div>
 
 ---
 
