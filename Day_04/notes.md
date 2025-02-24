@@ -61,3 +61,20 @@ Git - Does not need internet | Works wherever you are (i.e., on plane)
 
 Git - Version control system (software) - No internet required
 Github - Google Drive (used for storing files)
+
+### .ipynb
+
+Interactive python notebook
+Includes _notes + python code_
+
+### venv
+
+Creates a virtual environment
+Why? - Acts as a shield against bad global python updates
+`Run projects in venv`
+
+Steps:
+
+1. uv venv (in terminal)
+2. uv pip install ipykernel
+3. select your virtual environment(local) to run your code
