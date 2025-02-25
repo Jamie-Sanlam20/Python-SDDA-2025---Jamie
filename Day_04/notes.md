@@ -78,3 +78,21 @@ Steps:
 1. uv venv (in terminal)
 2. uv pip install ipykernel
 3. select your virtual environment(local) to run your code
+
+## Common methods
+
+List & string (used with both)
+
+1. Slice
+2. Index: can use both positive + negative values
+3. Length
+4. Count
+5. Concatenation operator (+)
+6. Repitition operator (\*)
+
+## CRUD - List
+
+1. Create - []
+2. Read - index & slice
+3. Update - Append & Insert
+4. Delete - Remove & Pop
