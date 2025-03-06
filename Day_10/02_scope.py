@@ -2,7 +2,18 @@
 # Defined: Lifetime of variable
 # Area in which the variable is alive (which line no. to which line no.)
 
+# print(z1)  # NameError: name 'z1' is not defined ❌
+
 # t1 = 100
+
+# t2 (11 - 12)
+def simple():
+    t2 = 10
+    print(t2)
+
+
+# # t2 -> simple function scope
+# # Cannot access t2 outside
 
 # def simple():
 #     t2 = 10
@@ -33,4 +44,27 @@ get_price()
 # Variables outside the function can be accessed inside the function.
 
 # Lexical scope -> just outside of the function
-# Closure == Lexical scope + function scope
+# Closure == Lexical scope + function's own scope
+
+# Case 2:
+
+
+code_word = "Hulk"
+
+
+def space_ship():
+    question = "Please provide code word"
+
+    def code_word_check():
+        password = "Hulk"
+        print(question)
+
+        if password == code_word:
+            print(f"Welcome, {password} the strongest avenger 💪")
+        else:
+            print("❌ Access denied to 🚀")
+
+    code_word_check()
+
+
+space_ship()
