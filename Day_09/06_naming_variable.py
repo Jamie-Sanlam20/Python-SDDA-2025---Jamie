@@ -17,3 +17,16 @@
 # 2. Should be descriptive (but keep it short)
 # 3. CONSTANT_CASE (variable should be in capital letters)
 # e.g., PI = 3.14 (doesn't change)
+
+# # if = 2 # ❌
+# sum = 4  #❌
+# print(sum)
+
+
+# 1t  - ❌
+# t1  - ✅
+
+# num$ = 5 # ❌
+# num_1 = 5 # ✅
+
+PI = 3.14  # ✅ Constant
