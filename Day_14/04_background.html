@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -12,25 +19,74 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <style>
       body {
         margin: 0px;
       }
 
       .banner {
-        background: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg");
+        /* background: url(https://static.vecteezy.com/system/resources/previews/004/881/577/large_2x/idyllic-tropical-beach-landscape-for-background-or-wallpaper-design-of-tourism-for-summer-vacation-landscape-holiday-destination-concept-exotic-island-scene-relaxing-view-paradise-seaside-lagoon-photo.jpg)
+          #52bcaf; */
+
+        /* Gradients separated by , */
+        background: url(https://static.vecteezy.com/system/resources/previews/004/881/577/large_2x/idyllic-tropical-beach-landscape-for-background-or-wallpaper-design-of-tourism-for-summer-vacation-landscape-holiday-destination-concept-exotic-island-scene-relaxing-view-paradise-seaside-lagoon-photo.jpg),
+          linear-gradient(52deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
         height: 600px;
+
+        /* removes repitition of BG */
         background-repeat: no-repeat;
+
+        /* Zoom out */
+        background-size: contain;
+        /* Zoom in */
         background-size: cover;
+
+        /* Focus on bottom */
+        background-position: bottom;
+
+        /* Blend */
+        background-blend-mode: luminosity;
+
+        /* Center */
+        display: grid;
+        place-content: center;
+
+        /* text-align: center; */
+        /* margin: 0 auto; */
+      }
+
+      .banner-title {
+        margin: 0px;
+        font-size: 64px;
+        font-family: "Pacifico", cursive;
+        color: white;
+
+        background: rgba(106, 110, 111, 0.455);
+        padding: 16px;
       }
     </style>
   </head>
   <body>
     <div class="banner">
-      <h1>
-        Welcome to your dreamland <i class="fa-solid fa-plane-departure"></i>
+      <h1 class="banner-title">
+        Welcome to your dream land <i class="fa-solid fa-compass"></i>
       </h1>
     </div>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit
+      quibusdam voluptatum quo officiis, ut, enim esse sequi, libero repellat
+      modi voluptatibus obcaecati voluptas eaque! Aliquid quia, odit deleniti
+      totam ipsam iure molestiae assumenda autem laboriosam nostrum natus
+      quibusdam cum explicabo doloremque nam amet aspernatur, reiciendis sint.
+      Asperiores esse voluptatem aperiam quod atque neque architecto obcaecati
+      modi, quo fugiat consequuntur laudantium. Sit sunt rerum nobis officiis
+      dicta recusandae cum. Vitae officiis sit voluptas soluta, id esse quia.
+      Possimus minus odit, ipsum, commodi dolores nostrum veniam iure eum, in
+      cupiditate voluptate enim suscipit? Inventore commodi error modi nisi,
+      suscipit doloremque repellendus voluptas!
+    </p>
   </body>
 </html>
 
@@ -38,9 +94,16 @@
 If we just use text-align: center (it will center the text horizontally, but not veritcally)
 Use display: grid, place-content: center-->
 
-<!--
-Instead of using emojis - use icons
-Why?
-Emojis aren't the same on different platforms
-Use font awesome to find icon - then link it using cdnjs (similar to linking a font)
-<i></i> stands for icon -->
+<!-- Why do we use a background image versus a normal image?
+ We can write ontop of a background image, where we can't write ontop of a normal image-->
+
+<!-- When would you use:
+background-repeat: repeat;
+you can cover the background of your website with an image (like tiles - the same image repeated)
+-->
+
+<!-- background-blend-mode has to be there to blend a colour and image
+
+ debugging syntax errors:
+ open dev tools
+ csss dev tools will show ⚠️ next to property (shows invalid property)-->
