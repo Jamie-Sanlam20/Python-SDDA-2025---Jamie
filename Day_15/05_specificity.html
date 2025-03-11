@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #cool {
+        color: plum;
+      }
+
+      /* Class selector */
+      .fun {
+        color: skyblue;
+      }
+
+      /* Element selectors */
+      p {
+        color: crimson !important;
+        font-size: 48px;
+      }
+
+      /* Lower overrides above - Cascading */
+      p {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="cool" class="fun" style="color: teal">This is super cool</p>
+  </body>
+</html>
+
+<!--
+Specificity
+
+!important (UN)  > inline (president)  >   id (mom) > class (father)  > p (element) (You)
+
+-->
+
+<!-- element selector / class select: lower one overwrites above one
+ Cascading - reads from top to bottom - last one wins -->
+
+<!-- class selector is prioritised over element selector
+  class has higher priority over elements
+-->
+
+<!-- id has the higher priority -->
+<!-- id name can only be used once in an html file (that's why it's not used) -->
+<!-- more problems: class cannot override id -->
+
+<!-- attribute order doesn't matter  -->
+<!-- inline css (higher priority) -->
+<!-- !important overrides all others (HIGHEST PRIORITY) -->
+
+<!-- only encouraged to use class + element selector -->
+
+<!--  internal + external css doesn't matter - it depends on the order in the head tab
+  (whether the link comes first or style tag) -->
