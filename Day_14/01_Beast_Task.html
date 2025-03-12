@@ -4,6 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        /* Centering */
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        margin: 0px;
+
+        font-family: Poppins, sans-serif;
+        /* background-color: hsl(2deg 88.24% 6.67%); */
+        background-image: linear-gradient(
+          52deg,
+          #170101,
+          #2e1613,
+          #47271c,
+          #603923,
+          #764f28
+        );
+        color: white;
+      }
+
+      .poster-spec {
+        color: hsl(1.82deg 13.04% 60.61%);
+      }
+
+      .poster-summary {
+        color: hsl(2.22deg 35.06% 84.9%);
+      }
+
+      .poster-image {
+        /* width: 400px; */
+        /* 100% of container width */
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 24px;
+      }
+
+      .poster-container {
+        /* background: orange; */
+        width: 400px;
+        text-align: center;
+      }
+
+      .poster-title {
+        font-size: 36px;
+        margin: 0px;
+      }
+
+      .poster-content {
+        /* background: orange; */
+        padding: 0px 16px;
+      }
+
+      .highlight {
+        color: hsl(2.22deg 35.06% 84.9%);
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <!-- div: block element -->
+    <div class="poster-container">
+      <img
+        class="poster-image"
+        src="https://i.pinimg.com/736x/d0/b9/ec/d0b9ec3a33c3b8627f9b1c6958b8fb3d.jpg"
+        alt=""
+      />
+      <div class="poster-content">
+        <h2 class="poster-title">Beast</h2>
+        <p class="poster-spec">
+          2022 <span class="highlight">‧</span> Action/Dark comedy
+          <span class="highlight">‧</span> 2h 38m
+        </p>
+        <p class="poster-summary">
+          Beast is an upcoming Indian Tamil-language action thriller film
+          written and directed by Nelson and produced by Sun Pictures. The film
+          stars Vijay and Pooja Hegde, while Selvaraghavan, Yogi Babu and Redin
+          Kingsley play supporting roles
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
+
+<!-- 
+a - links
+span - inline (Highlight)
+-->
+
+<!-- span doesn't have a special purpose - it's just used as an inline element
+ where anchor tags are used for links-->
