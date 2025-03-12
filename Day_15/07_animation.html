@@ -18,14 +18,16 @@
         height: 350px;
         width: 350px;
         background: crimson;
-        /* Animation */
+        /* Animation: 'all' means all properties */
         transition: 0.2s all;
       }
 
+      /* instead of all, you can say specific properties that should work */
+
       .box:hover {
         background: skyblue;
-        transform: scale(1.1) translateY(-40px);
-        cursor: pointer;
+        transform: scale(1.1) translateY(-40px); /* moves up y axis (vertically) */
+        cursor: pointer; /* change icon of the cursor to the hand cursor */
       }
 
       /* .box:active {
@@ -83,8 +85,10 @@ enables us to target elements or scenarios
 -->
 
 <!-- interactions
-:hover - targets mouseover
-:active - will target click
+:hover - targets mouseover (hover over it)
+:active - will target click (click on it)
  -->
 
 <!-- cursor: pointer - mouse changes to hand (shows that it's clickale) -->
+
+<!-- when user interacts - pseudo class attaches to the element -->
