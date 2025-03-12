@@ -1,3 +1,73 @@
+## Ragav Notes 
+
+## Display
+
+### Block
+
+Block elements occupy entire width of container
+
+- p
+- h1-h6
+- div
+- list
+
+### Inline
+
+Inline elements occupy with of content
+
+- a
+- span
+- inline
+
+## SVG
+
+Scalar Vector Graphics
+
+- Doesn't get pixelated
+- Color them easily
+- Smaller size
+
+### Drawback
+
+- No gradients
+
+## 3 ways of CSS
+
+- Inline - ❌
+- Internal
+  - Reducing the round-trip
+  - Cannot be used if the file very long
+  - Small size -> Speed up -> Render Tree | Performance
+- External - ✅ - 95%
+  - Reuse ⬆️ - Add CSS to multiple HTML
+  - Separation of concern - HTML & CSS
+
+## Inline
+
+- Donot respect height or width
+- Side by Side
+
+## Block
+
+- Respects height and width
+- Stacked
+
+## Inline-Block
+
+- Respects height and width
+- Side by Side (Enough)
+- Stacked (Not enough space)
+
+## Flex
+
+- Apply on the parent element
+- Always side by side
+- Tries to keep Height constant
+- width is just a suggestion
+
+
+## Extra Notes
+
 ### When do we prefer Internal CSS?
 
 - HTML -> converted into DOM Tree
@@ -47,6 +117,8 @@ Combination of block + inline
 We want it to work, regardless of the space.
 HERO: `flex`
 
+- flex is a master of distributing empty space (when you fix width for each box)
+
 - Apply on parent element (not on child):
   - Applied on outer box (.container) -> not inner boxes (.box1, .box2, .box3)
 
@@ -56,7 +128,7 @@ ALWAYS side by side:
 flex tries to `keep the height constant` -> more width is given to more wording (i.e., middle section compared to first).
 extra info: flex-shrink will determine how fast it shrinks
 
-- flex is a master of distributing empty space (when you fix width for each box)
+
 
 ` click box next to display: flex to choose between empty space usage`
 
