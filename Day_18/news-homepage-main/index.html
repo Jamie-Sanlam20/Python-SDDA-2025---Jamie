@@ -22,10 +22,17 @@
     />
 
     <style>
-
       body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .main-container {
         font-size: 15px;
-        font-family: "Inter", sans-serif; ;
+        font-family: "Inter", sans-serif;
+        margin: 40px;
       }
 
       .header {
@@ -46,13 +53,15 @@
         background: url("./assets/images/image-web-3-desktop.jpg");
         height: 500px;
         width: 100%;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
       }
 
       .page-head {
         font-family: "Inter", sans-serif;
+        font-size: 60px;
         font-weight: 800;
+        width: 300px;
       }
 
       .site-body {
@@ -61,7 +70,14 @@
 
       .evolution-descrip {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
+      }
+
+      .more-evolution {
+        width: 330px;
+        line-height: 1.5;
+        padding-top: 20px;
+        justify-self: flex-end;
       }
 
       .button {
@@ -80,90 +96,122 @@
       .more-news {
         list-style: none;
         display: flex;
+        gap: 40px;
       }
 
       .news-items {
         display: flex;
-        flex-wrap: wrap;
       }
 
-      .news-images{
-        height: 150px;
+      .news-images {
+        height: 160px;
         width: 120px;
+        display: grid;
+        place-content: center;
       }
 
       .news-styling {
-        display: grid;
-        padding: 0px;
+        width: 225px;
+        margin-left: 20px;
       }
 
       h2 {
         color: hsl(5, 85%, 63%);
+        font-size: 35px;
+        margin: 0px;
       }
 
       .extra {
         display: grid;
         place-content: center;
       }
+
+      .navigation,
+      .news-summary,
+      .evo-summary {
+        color: hsl(236, 13%, 42%);
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .news-summary {
+        line-height: 1.75;
+      }
     </style>
   </head>
   <body>
-    <div class="header">
-      <img src="./assets/images/logo.svg"/>
+    <div class="main-container">
+      <div class="header">
+        <img src="./assets/images/logo.svg" />
+        <ul class="navigation">
+          <li>Home</li>
+          <li>New</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Categories</li>
+        </ul>
+      </div>
 
-      <ul class="navigation">
-        <li>Home</li>
-        <li>New</li>
-        <li>Popular</li>
-        <li>Trending</li>
-        <li>Categories</li>
-      </ul>
-    </div>
-
-    <section class="site-body">
-      <div class="main"></div>
-      <div class="evolution-descrip">
-        <h1 class="page-head">The Bright Future of Web 3.0?</h1>
-        <div>
-          <p>
-            We dive into the next evolution of the web
-            that claims to put the power of the platforms back into the hands of the
-            people. But is it really fulfilling its promise?
-          </p>
-          <p class="button">Read more</p>
+      <section class="site-body">
+        <div class="main"></div>
+        <div class="evolution-descrip">
+          <h1 class="page-head">The Bright Future of Web 3.0?</h1>
+          <div class="more-evolution">
+            <p class="evo-summary">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <p class="button">Read more</p>
+          </div>
         </div>
-    </section>
+      </section>
 
+      <div class="extra">
+        <ul class="more-news">
+          <li class="news-items">
+            <img
+              class="news-images"
+              src="./assets/images/image-retro-pcs.jpg"
+            />
+            <div class="news-styling">
+              <h2>01</h2>
+              <h3>Reviving Retro PCs</h3>
+              <p class="news-summary">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </li>
+          <li class="news-items">
+            <img
+              class="news-images"
+              src="./assets/images/image-top-laptops.jpg"
+            />
+            <div class="news-styling">
+              <h2>02</h2>
+              <h3>Top 10 Laptops of 2022</h3>
+              <p class="news-summary">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </li>
+          <li class="news-items">
+            <img
+              class="news-images"
+              src="./assets/images/image-gaming-growth.jpg"
+            />
+            <div class="news-styling">
+              <h2>03</h2>
+              <h3>The Growth of Gaming</h3>
+              <p class="news-summary">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <div class="extra">
-      <ul class="more-news">
-        <li class="news-items">
-          <img class="news-images" src="./assets/images/image-retro-pcs.jpg">
-          <div class="news-styling">
-            <h2>01</h2>
-            <h3>Reviving Retro PCs</h3>
-            <p>What happens when old PCs are given modern upgrades?</p>
-          </div>
-        </li>
-        <li class="news-items">
-          <img class="news-images" src="./assets/images/image-top-laptops.jpg">
-          <div class="news-styling">
-            <h2>02</h2>
-            <h3>Top 10 Laptops of 2022</h3>
-            <p>Our best picks for various needs and budgets.</p>
-          </div>
-        </li>
-        <li class="news-items">
-          <img class="news-images" src="./assets/images/image-gaming-growth.jpg">
-          <div class="news-styling">
-            <h2>03</h2>
-            <h3>The Growth of Gaming </h3>
-            <p>How the pandemic has sparked fresh opportunities.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-
   </body>
 </html>
