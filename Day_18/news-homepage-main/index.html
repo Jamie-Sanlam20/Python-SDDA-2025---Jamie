@@ -32,19 +32,21 @@
       .main-container {
         font-size: 15px;
         font-family: "Inter", sans-serif;
-        margin: 40px;
+        margin: 90px;
       }
 
       .header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin: 0px 20px;
+        margin-bottom: 70px;
       }
 
       .navigation {
         list-style: none;
         display: flex;
         gap: 24px;
-        align-items: center;
         font-family: "Inter", sans-serif;
         font-weight: 400;
       }
@@ -75,15 +77,15 @@
 
       .more-evolution {
         width: 330px;
-        line-height: 1.5;
-        padding-top: 20px;
+        line-height: 1.75;
         justify-self: flex-end;
+        align-self: center;
       }
 
       .button {
         border: solid 4px hsl(5, 85%, 63%);
         width: 180px;
-        height: 40px;
+        height: 45px;
         display: grid;
         place-content: center;
         background: hsl(5, 85%, 63%);
@@ -91,6 +93,7 @@
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 5px;
+        margin-top: 40px;
       }
 
       .more-news {
@@ -144,7 +147,7 @@
   <body>
     <div class="main-container">
       <div class="header">
-        <img src="./assets/images/logo.svg" />
+        <img class="logo" src="./assets/images/logo.svg" />
         <ul class="navigation">
           <li>Home</li>
           <li>New</li>
