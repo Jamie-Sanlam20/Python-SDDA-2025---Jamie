@@ -47,11 +47,29 @@
         font-family: "Inter", sans-serif;
         font-weight: 400;
       }
+
+      .main {
+        background: url("./assets/images/image-web-3-desktop.jpg");
+        height: 500px;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .page-head {
+        font-family: "Inter", sans-serif;
+        font-weight: 800;
+      }
+
+      .evolution-descrip {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
     </style>
   </head>
   <body>
     <div class="header">
-      <img src="./assets/images/logo.svg" />
+      <img src="./assets/images/logo.svg"/>
 
       <ul class="navigation">
         <li>Home</li>
@@ -62,9 +80,23 @@
       </ul>
     </div>
 
-    The Bright Future of Web 3.0? We dive into the next evolution of the web
-    that claims to put the power of the platforms back into the hands of the
-    people. But is it really fulfilling its promise? Read more 01 Reviving Retro
+    <section>
+      <div class="main"></div>
+      <div class="evolution-descrip">
+        <h1 class="page-head">The Bright Future of Web 3.0?</h1>
+        <div>
+          <p>
+            We dive into the next evolution of the web
+            that claims to put the power of the platforms back into the hands of the
+            people. But is it really fulfilling its promise?
+          </p>
+          <p class="button">Read more</p>
+        </div>
+    </section>
+
+    </div>
+
+    01 Reviving Retro
     PCs What happens when old PCs are given modern upgrades? 02 Top 10 Laptops
     of 2022 Our best picks for various needs and budgets. 03 The Growth of
     Gaming How the pandemic has sparked fresh opportunities.
