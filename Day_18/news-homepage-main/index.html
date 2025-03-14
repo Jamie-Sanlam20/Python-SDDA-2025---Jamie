@@ -32,6 +32,7 @@
 
       body {
         font-size: 15px;
+        font-family: "Inter", sans-serif; ;
       }
 
       .header {
@@ -65,6 +66,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
+
+      .button {
+        border: solid 4px hsl(5, 85%, 63%);
+        width: 180px;
+        height: 40px;
+        display: grid;
+        place-content: center;
+        background: hsl(5, 85%, 63%);
+        font-family: "Inter", sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
     </style>
   </head>
   <body>
@@ -96,10 +110,23 @@
 
     </div>
 
-    01 Reviving Retro
-    PCs What happens when old PCs are given modern upgrades? 02 Top 10 Laptops
-    of 2022 Our best picks for various needs and budgets. 03 The Growth of
-    Gaming How the pandemic has sparked fresh opportunities.
+    <ul class="more-news">
+      <li>
+        <h2>01</h2>
+        <h3>Reviving Retro</h3>
+        PCs What happens when old PCs are given modern upgrades?
+      </li>
+      <li>
+        <h2>02</h2>
+        <h3>Top 10 Laptops</h3>
+        of 2022 Our best picks for various needs and budgets.
+      </li>
+      <li>
+        <h2>03</h2>
+        <h3>The Growth of</h3>
+        Gaming How the pandemic has sparked fresh opportunities.
+      </li>
+    </ul>
 
     <div class="attribution">
       Challenge by
