@@ -1,3 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        background: plum;
+      }
+
+      .box2 {
+        background: purple;
+      }
+
+      .box3 {
+        background: pink;
+      }
+
+      .container {
+        /* display: flex;
+        flex-wrap: wrap; */
+
+        /* fr - fractional unit | ratio */
+        /* Grid Understands 2D layout */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr;
+        grid-template-columns: repeat(4, 1fr);
+        /* mix  */
+        /* grid-template-columns: repeat(3, 1fr) 2fr 1fr; */
+        gap: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem.
+      </div>
+      <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem.
+      </div>
+      <div class="box3">
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem.
+      </div>
+      <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem.
+      </div>
+      <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem.
+      </div>
+      <div class="box3">
+        voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatibus, voluptatem. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptatibus, voluptatem.
+      </div>
+    </section>
+  </body>
+</html>
+
+<!--
+
+Flex & Grid go hand in hand
+
+
+
+-->
+
 <!-- flex and grid are meant to be used alongside eachother  -->
 <!-- with flex, all the columns will be there, we cannot just choose 2 out of the 3 - maintaining no of columns -->
 
@@ -14,5 +93,10 @@
 
 <!-- grid doesn't maintain the height overall, it maintains row height -->
 <!-- gap in grid - space between columns and rows -->
-<!--  flex - will either be space between rows or colums (not both) - depends on the direction -->
+<!--  flex - will either be space between rows or columns (not both) - depends on the direction -->
 <!-- if flex wrap is on - both row and column space -->
+
+<!-- sometimes both flex and grid can be used - you go with the easier one -->
+
+<!-- go with grid when you want specific amount of columns, and you want 2D -->
+<!-- 1fr - one fractional ratio/unit - determines the size of the block -->
