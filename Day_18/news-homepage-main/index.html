@@ -22,13 +22,6 @@
     />
 
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
 
       body {
         font-size: 15px;
@@ -62,6 +55,10 @@
         font-weight: 800;
       }
 
+      .site-body {
+        margin: 20px;
+      }
+
       .evolution-descrip {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -79,6 +76,35 @@
         text-transform: uppercase;
         letter-spacing: 5px;
       }
+
+      .more-news {
+        list-style: none;
+        display: flex;
+      }
+
+      .news-items {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .news-images{
+        height: 150px;
+        width: 120px;
+      }
+
+      .news-styling {
+        display: grid;
+        padding: 0px;
+      }
+
+      h2 {
+        color: hsl(5, 85%, 63%);
+      }
+
+      .extra {
+        display: grid;
+        place-content: center;
+      }
     </style>
   </head>
   <body>
@@ -94,7 +120,7 @@
       </ul>
     </div>
 
-    <section>
+    <section class="site-body">
       <div class="main"></div>
       <div class="evolution-descrip">
         <h1 class="page-head">The Bright Future of Web 3.0?</h1>
@@ -110,29 +136,34 @@
 
     </div>
 
-    <ul class="more-news">
-      <li>
-        <h2>01</h2>
-        <h3>Reviving Retro</h3>
-        PCs What happens when old PCs are given modern upgrades?
-      </li>
-      <li>
-        <h2>02</h2>
-        <h3>Top 10 Laptops</h3>
-        of 2022 Our best picks for various needs and budgets.
-      </li>
-      <li>
-        <h2>03</h2>
-        <h3>The Growth of</h3>
-        Gaming How the pandemic has sparked fresh opportunities.
-      </li>
-    </ul>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+    <div class="extra">
+      <ul class="more-news">
+        <li class="news-items">
+          <img class="news-images" src="./assets/images/image-retro-pcs.jpg">
+          <div class="news-styling">
+            <h2>01</h2>
+            <h3>Reviving Retro PCs</h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </li>
+        <li class="news-items">
+          <img class="news-images" src="./assets/images/image-top-laptops.jpg">
+          <div class="news-styling">
+            <h2>02</h2>
+            <h3>Top 10 Laptops of 2022</h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </li>
+        <li class="news-items">
+          <img class="news-images" src="./assets/images/image-gaming-growth.jpg">
+          <div class="news-styling">
+            <h2>03</h2>
+            <h3>The Growth of Gaming </h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </li>
+      </ul>
     </div>
+
   </body>
 </html>
