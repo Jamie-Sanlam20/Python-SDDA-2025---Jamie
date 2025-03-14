@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .profile-pic {
+      /* .profile-pic {
         height: 200px;
         width: 300px;
         border: 2px solid purple;
         border-radius: 20px;
+      } */
+
+      .profile-pic {
+        height: 300px;
+        width: 300px;
+        border: 4px solid purple;
+        border-radius: 50%;
+
+        /* Zoom out */
+        object-fit: contain;
+
+        /* Zoom in */
+        object-fit: cover;
       }
     </style>
   </head>
@@ -22,6 +35,10 @@
       alt=""
     />  -->
 
+    <!-- Self closing tags
+    1. meta
+    2. img
+    -->
     <img
       class="profile-pic"
       src="https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
@@ -30,7 +47,10 @@
   </body>
 </html>
 
-<!-- border-radius curves the border -->
+<!-- border-radius curves the border
+ px for pill shape
+ % for circular shape
+ 50% - perfect circle -->
 
 <!-- Self closing tags
  1. Meta
