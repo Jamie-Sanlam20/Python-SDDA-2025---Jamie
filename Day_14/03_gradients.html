@@ -7,6 +7,7 @@
 
     <style>
       body {
+        /* Centering */
         display: grid;
         place-content: center;
         min-height: 100vh;
@@ -16,13 +17,16 @@
       .box {
         height: 500px;
         width: 400px;
-        background-image: linear-gradient(
+        background: linear-gradient(to right, crimson, skyblue);
+        background: linear-gradient(to bottom, crimson, skyblue);
+        background: linear-gradient(to bottom, #dc143c, orange, #87ceeb);
+        background: linear-gradient(
           to right top,
-          #ed6666,
-          #f18648,
-          #e2ac34,
-          #c0d042,
-          #87f076
+          #dc143c,
+          #dd4c9d,
+          #b186e0,
+          #7fb1f5,
+          #87ceeb
         );
       }
     </style>
@@ -38,5 +42,5 @@
 
  -->
 
- <!-- to right top (diagonally going to top from bottom)
+<!-- to right top (diagonally going to top from bottom)
   to right bottom (diagonally going to bottom from left top))-->
