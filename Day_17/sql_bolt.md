@@ -278,7 +278,7 @@ first inside query gets executed then outer query gets executed
 
 ![Review 1 complete](image-4.png)
 
-Exercise 6
+## Exercise 6
 
 see if you need join first - then use it.
 why didn't we use left join? it would give us all movie items (e.g., movies that have no sales)
@@ -315,7 +315,7 @@ why didn't we use left join? it would give us all movie items (e.g., movies that
 
 only 1e and 2w has employees - don't need join - employees table shows what buildings they belong to
 
-Exercise 7
+## Exercise 7
 
 1. Find the list of all buildings that have employees ✓
 
@@ -350,7 +350,7 @@ IS NULL
 if you don't want null:
 IS NOT NULL
 
-Exercise 8
+## Exercise 8
 
 1. Find the name and role of all employees who have not been assigned to a building ✓
 
@@ -378,7 +378,7 @@ AS .. - changes column name to whichever name you set it as
 ABS (absolute numbers)
 you can also / column integers
 
-Exercise 9
+## Exercise 9
 
 1. List all movies and their combined sales in millions of dollars ✓
 
@@ -409,7 +409,7 @@ Exercise 9
 
 ![Exercise 9 complete](image-12.png)
 
-Exercise 10
+## Exercise 10
 
 `each` - clue: GROUP BY
 
@@ -438,7 +438,7 @@ Exercise 10
 
 ![Exercise 10 complete](image-13.png)
 
-Exercise 11 — Tasks
+## Exercise 11 — Tasks
 
 - sometimes you don't need group by, you can just use where clause.
 - WHERE clause is a filter, HAVING clause is also a filter.
@@ -480,7 +480,7 @@ Order of execution
 4. ORDER BY ..
 5. LIMIT .. OFFSET
 
-Exercise 12
+## Exercise 12
 
 1. Find the number of movies each director has directed
 
@@ -512,7 +512,7 @@ if you're giving values in right order (with columns) - you don't have to mentio
 multiple rows can be added at one time
 VALUES (..), (..)
 
-Exercise 13
+## Exercise 13
 
 1. Add the studio's new production, Toy Story 4 to the list of movies (you can use any director)
 
@@ -532,7 +532,7 @@ Exercise 13
 
 UPDATE steps:
 
-1. SELECT statement - check what you're going to update
+1. SELECT statement - check what you're going to update (check whether it's the correct rows)
 2. Change select to UPDATE or DELETE
 
 When to use update:
@@ -545,7 +545,7 @@ set column1 = value1,
 column2 = value2
 where clause
 
-Exercise 14
+## Exercise 14
 
 1. The director for A Bug's Life is incorrect, it was actually directed by John Lasseter
 
@@ -558,13 +558,101 @@ Exercise 14
 2. The year that Toy Story 2 was released is incorrect, it was actually released in 1999
 
    ```sql
-   INSERT INTO boxoffice
-   VALUES (4, 8.7, 340000000, 270000000);
+   UPDATE movies
+   SET year = 1999
+   WHERE title = "Toy Story 2";
    ```
 
 3. Both the title and director for Toy Story 8 is incorrect! The title should be "Toy Story 3" and it was directed by Lee Unkrich
 
    ```sql
-   INSERT INTO boxoffice
-   VALUES (4, 8.7, 340000000, 270000000);
+   UPDATE movies
+   SET title = "Toy Story 3",
+       director = "Lee Unkrich"
+   WHERE title = "Toy Story 8";
    ```
+
+![Exercise 14 complete](image-17.png)
+
+## Exercise 15
+
+1. This database is getting too big, lets remove all movies that were released before 2005.
+
+   ```sql
+   SELECT *
+   FROM movies
+   WHERE year < 2005;
+
+   DELETE FROM movies
+   WHERE year < 2005;
+   ```
+
+2. Andrew Stanton has also left the studio, so please remove all movies directed by him.
+
+   ```sql
+   SELECT *
+   FROM movies
+   WHERE director = "Andrew Stanton";
+
+   DELETE
+   FROM movies
+   WHERE director = "Andrew Stanton";
+   ```
+
+![Exercise 15 complete](image-18.png)
+
+## Exercise 16
+
+1. Create a new table named Database with the following columns:
+   – Name A string (text) describing the name of the database
+   – Version A number (floating point) of the latest version of this database
+   – Download_count An integer count of the number of times this database was downloaded
+
+This table has no constraints.
+
+```sql
+CREATE TABLE Database (
+    Name TEXT,
+    Version FLOAT,
+    Download_count INTEGER
+);
+```
+
+![Exercise 16 complete](image-19.png)
+
+## Exercise 17
+
+1. Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in.
+
+   ```sql
+   ALTER TABLE movies
+   ADD Aspect_ratio FLOAT;
+   ```
+
+2. Add another column named Language with a TEXT data type to store the language that the movie was released in. Ensure that the default for this language is English.
+
+We want default language to be english (already filled in the column).
+
+```sql
+ALTER TABLE movies
+ADD Language TEXT
+    DEFAULT 'English';
+```
+
+![Exercise 17 complete](image-20.png)
+
+## Exercise 18
+
+1. We've sadly reached the end of our lessons, lets clean up by removing the Movies table
+
+   ```sql
+   DROP TABLE movies;
+   ```
+
+2. And drop the BoxOffice table as well
+
+   ```sql
+   DROP TABLE BoxOffice;
+   ```
+
+![Exercise 18 complete](image-21.png)
