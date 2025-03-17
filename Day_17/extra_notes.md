@@ -176,3 +176,104 @@ if there is a word like 'each' - giveaway to use group by
 
 use group by with aggregation functions
 whenever you use group by - other columns won't make sense - only keep aggregation column
+
+group by is used for summarising data for each quarter/month/year (time limit).
+
+## HAVING
+
+both `WHERE` and `HAVING` are filters.
+Having filters after GROUP BY clause.
+WHERE filters before GROUP BY clause.
+
+## DELETE FROM
+
+delete is often used in real-life.
+logs get saved everytime changes are made.
+after a time period, these logs are deleted (takes up too much space)
+
+## DML - Data Manipulation Language
+
+DML - Data Manipulation Language
+data manipulation on CRUD operations
+INSERT SELECT, UPDATE, DELETE
+
+## DDL - Data Definition Language
+
+We have only touched data in the table, not the table itself.
+Adding columns, creation, updation, deletion of entire table.
+
+CREATE TABLE IF NOT EXISTS - if the table already exists, and you try to create it, it will silently fail.
+IF NOT EXISTS not present - if the table exists, it will throw an error message.
+
+- Datatype - define datatype (what it should be) -
+
+  - `integer` (number), `boolean` (true/false)
+  - `float`, `double`, `real` - precision differs (number of values after decimal point)
+    - float (3 digits after dec point), double (6 digits after dec point), real (12 digits after dec point)
+    - differs between sql flavours / database you're using
+  - `character`, `varchar`, `text` - stores string data
+    - lenth of string differs
+    - char -> string (yes or no) (10 characters), varchar -> sentences (250 characters), text -> paragrapghs (LinkedIn post)
+  - `date` (stores date), `datetime` (stores date + time)
+  - `blob` - binary data
+    - stores images / videos (not the actual images or videos - stores path to image or video)
+    - storing images or videos is detrimental to the db
+
+- Constraint
+  - primary key (makes database follow the rules of the primary key)
+    - unique, not null, only one PK per table
+    - if you try to duplicate values (id 2 twice), it will error out / if you try to create two PKs in one table
+    - creating composite PKS -> PK (id, username) - put in a box (these two combined is one PK)
+  - autoincrement - automatically fills in data (or PKs)
+    - when you write first INSERT statement, it will follow along by adding +1 (or two, three, etc.)
+  - unique
+    - difference between unique and PK:
+      - null is allowed in unique.
+      - can have multiple unique columns in tables.
+        - e.g., username (unique), email (unique)
+  - not null - we want something to be filled in (cannot be empty)
+    - e.g., username (not null), email (not null)
+  - check - custom validation
+    - e.g., driving test
+      - id, name, age (check age >= 18, if yes, then you can insert id, name) (if not, error)
+  - foreign key
+    - apply to column that allows you to join tables
+    - rules: can be null, pk in another table, used to join tables
+
+```sql
+CREATE TABLE movies (
+    id INTEGER PRIMARY KEY,
+    title TEXT,
+    director TEXT,
+    year INTEGER,
+    length_minutes INTEGER
+);
+```
+
+id -> column name
+integer -> datatype
+primary key -> constraint
+
+CREATE statement --> schema/blueprint - dictates how table should behave
+
+- Default value
+
+varchar solved different language constraints
+
+## ALTERING columns
+
+Adding columns, Renaming the table
+
+ALTER TABLE table_name:
+ADD column_name -> adds column
+DROP column_name-> drops columns
+RENAME TO new_tablename -> renames the table
+
+## DROPPING tables
+
+DROP TABLE IF EXISTS table_name;
+restrict access to DROP commands - to ensure people don't drop tables by mistake
+no confirmation if you decide to drop table.
+
+don't need IF EXISTS (still works)
+if you want a silent fail, use IF EXISTS
